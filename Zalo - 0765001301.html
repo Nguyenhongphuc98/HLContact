@@ -1,0 +1,960 @@
+<!-- There are some issues in this solution. check protocol not work in chrome (focus-bulur) macos, can't open protocol from imac :(( -->
+<!-- Safari not auto focus after accept/cancel. Did resolve chrome with frame:d -->
+
+
+
+
+
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://zalo.me/0765001301 -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Zalo - 0765001301</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="keywords" content="Zalo, Zaloapp, Zalo VNG Corp">
+    <meta property="og:image" content="https://stc-zaloprofile.zdn.vn/pc/v1/images/zalo_logo_new.jpg">
+    <link rel="image_src" href="https://stc-zaloprofile.zdn.vn/pc/v1/images/zalo_sharelogo.png">
+    <meta name="description" content="Bấm vào đây để liên lạc với 0765001301 trên Zalo">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="./Zalo - 0765001301_files/css">
+    <script type="text/javascript" src="./Zalo - 0765001301_files/jquery.min.js.download"></script>
+    <script type="text/javascript" src="./Zalo - 0765001301_files/pgwbrowser.min.js.download"></script>
+    <script type="text/javascript" src="./Zalo - 0765001301_files/injectCSS.js.download"></script>
+
+    <!-- Fixed style -->
+    <style>
+        body {
+            margin: 0
+        }
+        
+        body,
+        p {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #4a4a4a
+        }
+        
+        .btn {
+            display: inline-block;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            -webkit-border-radius: 0.25rem;
+            border-radius: 0.25rem
+        }
+        
+        .container,
+        .container-fluid {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto
+        }
+        
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .container {
+                max-width: 960px
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px
+            }
+        }
+        
+        .header {
+            background: #08f;
+            padding: 12px 0
+        }
+        
+        .header .container {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex
+        }
+        
+        .header .container .header-left {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+            flex-basis: 50%
+        }
+        
+        .header .container .header-left>p {
+            color: #fff;
+            padding-left: 10px;
+            font-size: 12px;
+            position: relative;
+            top: 5px
+        }
+        
+        .header .container .header-right {
+            -webkit-flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+            -webkit-box-pack: end;
+            -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center
+        }
+        
+        .header .container .header-right>.btn {
+            border-color: #78c6ff;
+            background: transparent;
+            -webkit-border-radius: 13.5px;
+            border-radius: 13.5px;
+            color: #fff;
+            padding: 0.2rem 0.75rem;
+            font-size: 14px;
+            float: right
+        }
+        
+        .header .container .header-right>.btn:hover {
+            background: #fff;
+            color: #08f;
+            cursor: pointer
+        }
+        
+        .content {
+            text-align: center
+        }
+        
+        .content__avatar {
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            margin: auto;
+            display: block;
+            margin-top: 60px
+        }
+        
+        .content__text-invite {
+            font-size: 18px;
+            padding-top: 33px
+        }
+        
+        .content__group-name {
+            font-size: 36px;
+            font-weight: 500;
+            margin-top: -5px;
+            margin-bottom: 1px
+        }
+        
+        .content__quantity {
+            margin-bottom: 30px
+        }
+        
+        .content__info {
+            position: relative;
+            padding: 22px 22px 61px 22px
+        }
+        
+        .content__info:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 166px;
+            margin: auto;
+            border-top: 1px solid #979797;
+            left: 0;
+            right: 0
+        }
+        
+        .content__info>p {
+            font-size: 18px;
+            font-weight: 300
+        }
+        
+        .content__info__text {
+            margin-top: 0px;
+            margin-bottom: 10px
+        }
+        
+        .content__info__text--top {
+            margin-top: 29px
+        }
+        
+        .guide {
+            padding: 46px 0 104px 0;
+            background: #f8f8f8;
+            text-align: center
+        }
+        
+        .guide>p {
+            font-weight: 500;
+            font-size: 18px
+        }
+        
+        .guide--flex {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+            font-size: 20px;
+            font-weight: 300;
+            padding-top: 48px
+        }
+        /* .guide__right,
+        .guide__left {
+            padding-bottom: 51px
+        } */
+        
+        .guide__right>p,
+        .guide__left>p {
+            margin-bottom: 7px;
+            margin-top: 0;
+            font-size: 20px;
+            font-weight: 300
+        }
+        
+        .guide__right>img,
+        .guide__left>img {
+            padding-top: 43px
+        }
+        
+        .guide__right {
+            -webkit-flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+            flex-basis: 50%
+        }
+        
+        .guide__right__see {
+            font-style: italic;
+            font-size: 16px;
+            margin-top: 17px;
+            display: block;
+            font-weight: 300;
+            text-decoration: none
+        }
+        
+        .guide__right__see:hover {
+            color: #08f;
+            cursor: pointer
+        }
+        
+        .guide__left {
+            -webkit-flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+            flex-basis: 50%
+        }
+        
+        .guide__left__group {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: space-evenly;
+            -webkit-justify-content: space-evenly;
+            -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+            margin-top: 38px
+        }
+        
+        .guide__left__group__btn {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            border-color: #78c6ff;
+            background: #fff;
+            -webkit-border-radius: 31.5px;
+            border-radius: 31.5px;
+            color: #08f;
+            padding: 0.08rem 0.75rem;
+            font-size: 14px;
+            float: right;
+            -webkit-flex-basis: 28.9%;
+            -ms-flex-preferred-size: 28.9%;
+            flex-basis: 28.9%;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center
+        }
+        
+        .guide__left__group__btn>i {
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+            font-size: 24px
+        }
+        
+        .guide__left__group__btn>p {
+            padding-left: 10px;
+            font-weight: 500;
+            color: #08f
+        }
+        
+        .guide__left__group__btn:hover {
+            cursor: pointer;
+            background: #08f;
+            color: #fff
+        }
+        
+        .guide__left__group__btn:hover>p {
+            color: #fff
+        }
+        
+        .footer {
+            padding: 1px;
+            background: #08f
+        }
+        
+        .footer>p {
+            color: #fff;
+            text-align: center;
+            margin: 12px auto;
+            font-weight: 300
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0
+            }
+            .header {
+                padding-right: 5px;
+                padding-left: 5px
+            }
+            .content__info>p {
+                line-height: 29px
+            }
+            div.guide>p {
+                line-height: 27px
+            }
+            div.guide--flex {
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap
+            }
+            div.guide__right {
+                margin-top: 22px
+            }
+            div.guide__right>img {
+                width: 68%
+            }
+            div.guide__left>img {
+                width: 96%
+            }
+            div.guide__right,
+            div.guide__left {
+                -webkit-flex-basis: 100%;
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%
+            }
+        }
+        
+        @font-face {
+            font-family: "zalo-font";
+            src: url("https://stc-zaloprofile.zdn.vn/pc/v1/fonts/zalo-font.eot");
+            src: url("https://stc-zaloprofile.zdn.vn/pc/v1/fonts/zalo-font.eot?#iefix") format("eot"), url("https://stc-zaloprofile.zdn.vn/pc/v1/fonts/zalo-font.woff2") format("woff2"), url("https://stc-zaloprofile.zdn.vn/pc/v1/fonts/zalo-font.woff") format("woff"), url("https://stc-zaloprofile.zdn.vn/pc/v1/fonts/zalo-font.ttf") format("truetype"), url("https://stc-zaloprofile.zdn.vn/pc/v1/fonts/zalo-font.svg#zalo-font") format("svg");
+            font-weight: normal;
+            font-style: normal
+        }
+        
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 'zalo-font';
+            font-size: inherit;
+            text-rendering: auto;
+            text-shadow: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+        
+        .fa:before {
+            display: inherit;
+            font-family: "zalo-font";
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-variant: normal !important;
+            text-transform: none !important;
+            speak: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+        
+        .fa-lg {
+            font-size: 1.3333333333333333em;
+            line-height: 0.75em;
+            vertical-align: -15%
+        }
+        
+        .fa-2x {
+            font-size: 2em
+        }
+        
+        .fa-3x {
+            font-size: 3em
+        }
+        
+        .fa-4x {
+            font-size: 4em
+        }
+        
+        .fa-5x {
+            font-size: 5em
+        }
+        
+        .fa-fw {
+            width: 1.2857142857142858em;
+            text-align: center
+        }
+        
+        .fa-web:before {
+            content: "\EA01"
+        }
+        
+        .fa-windows:before {
+            content: "\EA02"
+        }
+        
+        body {
+            height: 56.25%
+        }
+    </style>
+
+    <style>
+        a {
+            text-decoration: none !important;
+        }
+        
+        .main {
+            min-height: calc(100vh - 99px);
+            background: #f8f8f8;
+        }
+    </style>
+
+    <!-- Flex style base on screen resolution -->
+    <style media="all" id="injectCSSContainer" type="text/css">
+        .content__avatar {
+            margin-top: 160px;
+            margin-bottom: 160px;
+            width: 650px;
+        }
+        
+        .content__text-invite {
+            padding-top: 30px;
+        }
+        
+        .content__group-name {
+            font-size: 33px;
+        }
+        
+        .content__info {
+            padding-bottom: 61px;
+        }
+        
+        .guide__text-use-join {
+            margin: 18px;
+        }
+        
+        .guide__left__group__btn>p {
+            font-size: 17px;
+        }
+        
+        .content__info>p {
+            font-size: 17px;
+        }
+        
+        .guide>p {
+            font-size: 17px;
+        }
+        
+        .guide__rightf,
+        .guide__leftf {
+            padding-bottom: 45px
+        }
+        
+        .guide__right>p {
+            font-size: 22px;
+        }
+        
+        .guide__left>p {
+            font-size: 22px;
+        }
+        
+        .guide__right>img {
+            padding-top: 63px;
+            width: 1283px;
+            height: 1256px;
+        }
+        
+        .guide__left>img {
+            padding-top: 63px;
+            width: 1800px;
+        }
+        
+        .guide {
+            padding-top: 43px;
+            padding-bottom: 104px;
+        }
+        
+        .footer {
+            position: relative;
+            top: 1px;
+        }
+        
+        .content__avatar {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            width: 325px;
+        }
+        
+        .content__text-invite {
+            padding-top: 15px;
+        }
+        
+        .content__group-name {
+            font-size: 32px;
+        }
+        
+        .content__info {
+            padding-bottom: 30.5px;
+        }
+        
+        .guide__text-use-join {
+            margin: 9px;
+        }
+        
+        .guide__left__group__btn>p {
+            font-size: 16px;
+        }
+        
+        .content__info>p {
+            font-size: 16px;
+        }
+        
+        .guide>p {
+            font-size: 16px;
+        }
+        
+        .guide__right>p {
+            font-size: 21px;
+        }
+        
+        .guide__left>p {
+            font-size: 21px;
+        }
+        
+        .guide__right>img {
+            padding-top: 31.5px;
+            width: 641.5px;
+            height: 628px;
+        }
+        
+        .guide__left>img {
+            padding-top: 31.5px;
+            width: 900px;
+        }
+        
+        .guide {
+            padding-top: 21.5px;
+            padding-bottom: 52px;
+        }
+        
+        .footer {
+            position: relative;
+            top: 1px;
+        }
+        
+        .content__avatar {
+            margin-top: 53.333333333333336px;
+            margin-bottom: 53.333333333333336px;
+            width: 216.66666666666666px;
+        }
+        
+        .content__text-invite {
+            padding-top: 10px;
+        }
+        
+        .content__group-name {
+            font-size: 31px;
+        }
+        
+        .content__info {
+            padding-bottom: 20.333333333333332px;
+        }
+        
+        .guide__text-use-join {
+            margin: 6px;
+        }
+        
+        .guide__left__group__btn>p {
+            font-size: 15px;
+        }
+        
+        .content__info>p {
+            font-size: 15px;
+        }
+        
+        .guide>p {
+            font-size: 15px;
+        }
+        
+        .guide__right>p {
+            font-size: 20px;
+        }
+        
+        .guide__left>p {
+            font-size: 20px;
+        }
+        
+        .guide__right>img {
+            padding-top: 21px;
+            width: 427.6666666666667px;
+            height: 418.6666666666667px;
+        }
+        
+        .guide__left>img {
+            padding-top: 21px;
+            width: 600px;
+        }
+        
+        .guide {
+            padding-top: 14.333333333333334px;
+            padding-bottom: 34.666666666666664px;
+        }
+        
+        .footer {
+            position: relative;
+            top: 1px;
+        }
+        
+        .content__avatar {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            width: 162.5px;
+        }
+        
+        .content__text-invite {
+            padding-top: 7.5px;
+        }
+        
+        .content__group-name {
+            font-size: 30px;
+        }
+        
+        .content__info {
+            padding-bottom: 15.25px;
+        }
+        
+        .guide__text-use-join {
+            margin: 4.5px;
+        }
+        
+        .guide__left__group__btn>p {
+            font-size: 14px;
+        }
+        
+        .content__info>p {
+            font-size: 14px;
+        }
+        
+        .guide>p {
+            font-size: 14px;
+        }
+        
+        .guide__right>p {
+            font-size: 19px;
+        }
+        
+        .guide__left>p {
+            font-size: 19px;
+        }
+        
+        .guide__right>img {
+            padding-top: 15.75px;
+            width: 320.75px;
+            height: 314px;
+        }
+        
+        .guide__left>img {
+            padding-top: 15.75px;
+            width: 450px;
+        }
+        
+        .guide {
+            padding-top: 10.75px;
+            padding-bottom: 26px;
+        }
+        
+        .footer {
+            position: relative;
+            top: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="scaleable-wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header-left">
+                    <img src="./Zalo - 0765001301_files/logo_1.jpg" class="header-left__logo">
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="content" style="padding: 10px; background: white;">
+                <div class="container">
+                    <img src="./Zalo - 0765001301_files/avt.jpg" alt="tham gia nhómm" width="150" class="content__avatar">
+                    <p class="content__text-invite">Sử dụng Zalo để liên lạc với số điện thoại</p>
+                    <h3 id="phone_number" class="content__group-name">0765001301</h3>
+                    <p class="content__quantity">bằng cách sau</p>
+                </div>
+            </div>
+            <div class="guide">
+                <div class="guide--flex container">
+
+                    <div class="guide__left guide__leftf">
+                        <p>Chat ngay sử dụng ZaloPC </p>
+                        <p> hoặc Zalo web. </p>
+                        <img src="./Zalo - 0765001301_files/pc.png" alt="Tải phiên bản zalo cho máy tính">
+                        <div class="guide__left__group">
+                            <script>
+                                function getQueryVariable(variable) {
+                                    var query = window.location.search.substring(1);
+                                    var vars = query.split("&");
+                                    for (var i = 0; i < vars.length; i++) {
+                                        var pair = vars[i].split("=");
+                                        if (pair[0] == variable) {
+                                            return pair[1];
+                                        }
+                                    }
+                                    return (false);
+                                }
+
+                                var utm = "";
+                                var utm2 = ""
+                                if (getQueryVariable('source')) {
+                                    utm = "?source=" + getQueryVariable('source');
+                                    utm2 = "?utm_source=" + getQueryVariable('source');
+                                }
+
+                                var ua = navigator.userAgent.toLowerCase();
+                                var isWinXP = ua.indexOf('windows nt 5.1') > 0;
+
+                                if (!isWinXP) {
+                                    document.write('<a id="windows"  class="btn guide__left__group__btn" onclick="' + "handleClick('client-window')" + '"><i class="fa fa-windows"></i> <p>Chat bằng Zalo PC</p></a>');
+                                } else {
+                                    document.write('<a id="windows" class="btn guide__left__group__btn" onclick="' + "handleClick('client-window-xp')" + '"><i class="fa fa-windows"></i> <p>Chat bằng Zalo PC</p></a>');
+                                }
+
+                                document.write('<a id="mac"  class="btn guide__left__group__btn" onclick="' + "handleClick('client-mac')" + '"><i class="fa fa-windows"></i> <p>Chat bằng Zalo PC</p></a>');
+                            </script>
+
+                            <a id="web_chat" href='https://chat.zalo.me/?phone="sdt"&openConv=true' class="btn guide__left__group__btn">
+                                <i class="fa fa-web"></i>
+                                <p>Chat bằng Zalo Web</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="guide__right guide__rightf">
+                        <p>Quét mã QR, nhắn tin </p>
+                        <p>bằng Zalo trên điện thoại:</p>
+                        <img width="383px" height="356px" src="./Zalo - 0765001301_files/qr.jpg">
+                        <a href="https://zalo.me/help/?utm_source=linking&amp;utm_medium=user_profile" class="guide__right__see">Xem hướng dẫn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© Copyright 2018 Zalo Group. All right Reserved.</p>
+        </div>
+    </div>
+
+    <!-- Adjust size until footer visiable -->
+    <script>
+        $(document).ready(function() {
+            $.fn.isVisible = function() {
+                var rect = this[0].getBoundingClientRect();
+                if ((rect.height > 0 || rect.width > 0) &&
+                    rect.bottom >= 0 &&
+                    rect.right >= 0 &&
+                    rect.top + 20 <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.left <= (window.innerWidth || document.documentElement.clientWidth)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            };
+
+            const maxWidth = 1920;
+            const minWidth = 768;
+            const lengthC = 1;
+            const maxScale = 11;
+
+            function createCss(scale) {
+
+                // We can't leave the font too small
+                if (scale > maxScale) {
+                    return;
+                }
+
+                $.injectCSS({
+                    '.content__avatar': {
+                        'margin-top': 160 / scale,
+                        'margin-bottom': 160 / scale,
+                        'width': 650 / scale
+                    },
+                    '.content__text-invite': {
+                        'padding-top': 30 / scale
+                    },
+                    '.content__group-name': {
+                        'font-size': 34 - scale
+                    },
+                    '.content__info': {
+                        'padding-bottom': 61 / scale
+                    },
+                    '.guide__text-use-join': {
+                        'margin': 18 / scale
+                    },
+                    '.guide__left__group__btn>p': {
+                        'font-size': 18 - scale
+                    },
+                    '.content__info > p': {
+                        'font-size': 18 - scale
+                    },
+                    '.guide>p': {
+                        'font-size': 18 - scale
+                    },
+                    '.guide__rightf, .guide__leftf': {
+                        'padding-bottom': 45 - scale
+                    },
+                    'guide__right > p': {
+                        'font-size': 23 - scale
+                    },
+                    '.guide__left > p': {
+                        'font-size': 23 - scale
+                    },
+                    '.guide__right > img': {
+                        'padding-top': 63 / scale,
+                        'width': 1283 / scale,
+                        'height': 1256 / scale
+                    },
+                    '.guide__left > img': {
+                        'padding-top': 63 / scale,
+                        'width': 1800 / scale
+                    },
+                    '.guide': {
+                        'padding-top': 43 / scale,
+                        'padding-bottom': 104 / scale,
+                    },
+                    '.footer': {
+                        'position': 'relative',
+                        'top': 1
+                    }
+                })
+                if ($('.footer').isVisible() == false) {
+                    scale++;
+                    createCss(scale)
+                }
+            }
+
+            var widthScreen = $(window).width();
+            if (widthScreen > minWidth && widthScreen < maxWidth) {
+                if ($('.footer').isVisible() == false) {
+                    createCss(lengthC);
+                }
+            }
+
+            const phone = document.getElementById("phone_number").innerHTML;
+            document.getElementById("web_chat").href = `https://chat.zalo.me/?phone="${phone}"&openConv=true`;
+        });
+    </script>
+
+    <!-- Process on platform -->
+    <script>
+        (function() {
+            var pgwBrowser = $.pgwBrowser();
+            switch (pgwBrowser.os.group) {
+                case "Windows":
+                    $("#mac").css("display", "none");
+                    $("#ubuntu").css("display", "none");
+                    $("#compatmac").css("display", "none");
+                    $("#compatubuntu").css("display", "none");
+                    break;
+                case "Mac OS":
+                    $("#windows").css("display", "none");
+                    $("#ubuntu").css("display", "none");
+                    $("#compatwindows").css("display", "none");
+                    $("#compatubuntu").css("display", "none");
+                    break;
+                case "Linux":
+                    $("#windows").css("display", "none");
+                    $("#mac").css("display", "none");
+                    $("#compatwindows").css("display", "none");
+                    $("#compatmac").css("display", "none");
+                    break;
+            }
+        })()
+    </script>
+
+    <!-- Custom protocol handle -->
+    <script src="./Zalo - 0765001301_files/cphandler.js">
+    </script>
+
+    <script>
+        function handleClick(client) {
+
+            // Analytics
+            // ga("send", "pageview", `pc/download/${client}`);
+
+            // Try to open Zalo app in client
+            const phone = document.getElementById("phone_number").innerHTML;
+            const uri = `zalo://${phone}`;
+
+            openCustomProtocol(uri,
+                (r) => {
+                    console.log(r);
+                    if (r === "unsupport")
+                        document.location.href = "http://zalo.me/download/zalo-pc";
+                }, {
+                    osName: $.pgwBrowser().os.group
+                });
+        }
+    </script>
+</body>
+<div style="position: absolute; top: 0px;"></div>
+
+</html>
