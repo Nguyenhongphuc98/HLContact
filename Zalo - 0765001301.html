@@ -1,10 +1,3 @@
-<!-- There are some issues in this solution. check protocol not work in chrome (focus-bulur) macos, can't open protocol from imac :(( -->
-<!-- Safari not auto focus after accept/cancel. Did resolve chrome with frame:d -->
-
-
-
-
-
 <!DOCTYPE html>
 <!-- saved from url=(0026)https://zalo.me/0765001301 -->
 <html lang="en">
@@ -931,8 +924,7 @@
     </script>
 
     <!-- Custom protocol handle -->
-    <script src="./Zalo - 0765001301_files/cphandler.js">
-    </script>
+    <script src="./Zalo - 0765001301_files/cphandler.js"></script>
 
     <script>
         function handleClick(client) {
@@ -946,12 +938,10 @@
 
             openCustomProtocol(uri,
                 (r) => {
-                    console.log(r);
                     if (r === "unsupport")
                         document.location.href = "http://zalo.me/download/zalo-pc";
-                }, {
-                    osName: $.pgwBrowser().os.group
-                });
+                }
+            );
         }
     </script>
 </body>

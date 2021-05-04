@@ -174,7 +174,6 @@ function launchWithFocusAndMouseEvent(uri, onResult, browserType, timeout) {
 
     function onBlur() {
         // if come here, we believe uri is correct
-        console.log('blur');
         clearTimeout(blueTimeout);
         window.addEventListener('mousemove', onMouseMove);
     }
@@ -198,8 +197,6 @@ function launchWithFocusAndMouseEvent(uri, onResult, browserType, timeout) {
     window.addEventListener('blur', onBlur);
     window.addEventListener('focus', onFocus);
 
-    // Use iframe instead because location not work on chrome (iMac)
-    // window.location.replace(uri);
     iframe.contentWindow.location.href = uri;
 }
 
@@ -211,36 +208,25 @@ function launchWithFocusAndMouseEvent(uri, onResult, browserType, timeout) {
  */
 function openCustomProtocol(uri, onResult, options = {}) {
     const timeout = options.timeout ? options.timeout : 300;
-    const _browserName = options.browserName ? options.browserName : "Unknown";
-    const _osName = options.osName ? options.osName : "Unknown";
+    const browserName = options.browserName ? options.browserName : "Unknown";
 
     // make sure passed value is valid
-    const myBrowser = browser[_browserName] ? _browserName : delectBrowser();
-    console.log(myBrowser.name);
+    const myBrowser = browser[browserName] ? browserName : delectBrowser();
 
     switch (myBrowser.name) {
         case browser.edge.name:
         case browser.IE.name:
-            // IE also can using protocolLong to check
             launchInIEnME(uri, onResult);
             break;
 
         case browser.firefox.name:
         case browser.edgeChromium.name:
         case browser.safari.name:
+        case browser.chrome.name:
             launchWithFocusAndMouseEvent(uri, onResult, myBrowser, timeout)
             break;
 
-        case browser.chrome.name:
-            // if (_osName === osName.MacOS) {
-            //     // Noway to check chrome on macOs
-            //     onResult(openUriResult.unsupport);
-            // } else {
-            launchWithFocusAndMouseEvent(uri, onResult, myBrowser, timeout);
-            // }
-            break;
         default:
-            // window.location.replace(uri);
             onResult(openUriResult.unsupport);
     }
 }
